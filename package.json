@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "prepare": "husky install",
+    "test": "exit 0",
     "lint": "yarn prettier --write . '*.{js,jsx,ts,tsx,json}' && yarn eslint --fix ."
   },
   "browserslist": [
