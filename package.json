@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "yarn prettier --write . '*.{js,jsx,ts,tsx,json}' && yarn eslint --fix ."
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
@@ -26,6 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.0",
     "typescript": "^4.3.2"
   }
 }

@@ -10,41 +10,38 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript",
-    "prettier"
+    "prettier",
   ],
   env: {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    project: ["./tsconfig.json"]
+    project: ["./tsconfig.json"],
   },
   settings: {
     react: {
-      version: "detect"
-    }
+      version: "detect",
+    },
   },
   rules: {
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": "off",
-    "no-use-before-define": [
-      "error",
-      { functions: false, classes: true, variables: true }
-    ],
+    "no-use-before-define": ["error", { functions: false, classes: true, variables: true }],
     "@typescript-eslint/explicit-function-return-type": "off",
     "func-names": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/no-empty-interface": "off"
+    "@typescript-eslint/no-empty-interface": "off",
   },
-  plugins: ["@typescript-eslint"]
+  plugins: ["@typescript-eslint"],
 };
