@@ -1,8 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import Document, { Html, Head, Main, NextScript, DocumentContext} from "next/document";
+import {ServerStyleSheet} from "styled-components";
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
 
     const originalRenderPage = ctx.renderPage;
