@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { ReactElement } from "react";
 
 class MyDocument extends Document {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -19,7 +20,7 @@ class MyDocument extends Document {
     return { styleTags, ...initialProps };
   }
 
-  render() {
+  render(): ReactElement {
     return (
       <Html>
         <Head />
