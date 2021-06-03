@@ -26,6 +26,7 @@ module.exports = {
     },
     project: ["./tsconfig.json"],
   },
+
   settings: {
     react: {
       version: "detect",
@@ -33,7 +34,6 @@ module.exports = {
   },
   rules: {
     "react/react-in-jsx-scope": "off",
-    "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": "off",
     "no-use-before-define": ["error", { functions: false, classes: true, variables: true }],
@@ -41,7 +41,6 @@ module.exports = {
     "func-names": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/no-empty-interface": "off",
   },
   plugins: ["@typescript-eslint"],
 };
