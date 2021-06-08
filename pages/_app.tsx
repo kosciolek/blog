@@ -7,7 +7,6 @@ import { darkTheme } from "../styles/theme";
 import "../styles/global.css";
 import { Center } from "../components/Center";
 
-
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const [theme] = useState(darkTheme);
   return (

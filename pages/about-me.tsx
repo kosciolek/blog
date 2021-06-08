@@ -1,9 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Menu } from "../components/Menu";
 
-export default function AboutMe() {
-  return <>
-    <Menu />
-    <div>Hello</div>
-  </>;
+export default function AboutMe(): ReactNode {
+  return (
+    <>
+      <Menu />
+      <div>Hello</div>
+    </>
+  );
 }

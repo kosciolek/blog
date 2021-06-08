@@ -6,10 +6,8 @@ const A = styled.a`
   color: ${({ theme }) => theme.color.front.main};
 `;
 
-export const Link: FC<{ href: string }> = ({ href, children }) => {
-  return (
+export const Link: FC<{ href: string }> = ({ href, children }) => (
     <NextLink passHref href={href}>
       <A>{children}</A>
     </NextLink>
   );
-};
