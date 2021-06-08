@@ -1,0 +1,66 @@
+export const meta = {
+  author: "Juliusz Kościołek",
+  title: "Javascript Sucks",
+  date: "01.05.2021"
+};
+
+## Hello!
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+# Big title
+
+- One
+  - Two
+- Again
+
+### Subtitle
+
+# h1h1h1
+
+
+[asd](/link)
+
+```tsx filename=file.txt
+const a = 2;
+console.log(a);
+```
+
+```tsx filename=index.tsx
+import React, { FC } from "react";
+import Highlight, { defaultProps, Language } from "prism-react-renderer";
+import dracula from "prism-react-renderer/themes/dracula";
+import styled from "styled-components";
+
+const Wrapper = styled.div``;
+
+export const CodeBlock: FC<{ className: string }> = ({ children, className }) => {
+  const language = className.replace(/language-/, "") as Language;
+
+  return (
+    <Wrapper>
+      <Highlight {...defaultProps} code={children as string} language={language} theme={dracula}>
+        {({ className: classNameInner, style, tokens, getLineProps, getTokenProps }) => (
+          <pre className={classNameInner} style={{ ...style, padding: "16px", overflowX: "auto" }}>
+            {tokens.map((line, i) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <div key={i} style={{ display: "flex", marginBottom: "5px" }}>
+                <span style={{ marginRight: "16px", opacity: 0.4 }}>{i}</span>
+                <div {...getLineProps({ line, key: i })} style={{ paddingRight: "16px" }}>
+                  {line.map((token, key) => {
+                    if (line.length - 1 === key && token.empty) return null;
+                    return (
+                      // eslint-disable-next-line react/no-array-index-key
+                      <span key={key} {...getTokenProps({ token, key })} />
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
+    </Wrapper>
+  );
+};
+```

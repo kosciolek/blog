@@ -4,13 +4,14 @@ export const darkTheme = {
       main: "#86C232",
       dim: "#61892F",
       text: "#D9D9D9",
+      highlight: "#D4E5BE"
     },
     back: {
       dark: "#222629",
       medium: "#474B4F",
-      bright: "#6B6E70",
-    },
-  },
+      bright: "#6B6E70"
+    }
+  }
 };
 
 export type Theme = typeof darkTheme;

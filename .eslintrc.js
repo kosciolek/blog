@@ -36,7 +36,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": "off",
-    "no-use-before-define": ["error", { functions: false, classes: true, variables: true }],
+    "no-use-before-define": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "func-names": "off",
     "react/jsx-props-no-spreading": "off",
