@@ -7,7 +7,7 @@ const A = styled.a`
 `;
 
 export const Link: FC<{ href: string }> = ({ href, children }) => (
-    <NextLink passHref href={href}>
-      <A>{children}</A>
-    </NextLink>
-  );
+  <NextLink passHref href={href}>
+    <A>{children}</A>
+  </NextLink>
+);
