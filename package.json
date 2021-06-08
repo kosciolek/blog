@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "generate": "node scripts/generatePostPages.js",
+    "build": "yarn generate && next build",
     "start": "next start",
     "prepare": "husky install",
     "test": "exit 0",

@@ -1,3 +1,4 @@
 next.config.js
 .eslintrc.js
-out
+out/
+scripts/

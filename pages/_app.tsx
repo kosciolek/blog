@@ -10,8 +10,6 @@ import { Center } from "../components/Center";
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const [theme] = useState(darkTheme);
-  console.log(Component, pageProps);
-  console.log('APP')
   return (
     <>
       <Head>
