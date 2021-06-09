@@ -4,7 +4,9 @@ const path = require("path");
 const postsDir = path.join(__dirname, "..", "..", "posts");
 const pagesDir = path.join(__dirname, "..", "pages", "posts");
 
-const makePostSource = (filename) => `import * as Post from "../posts/${filename}";
+const makePostSource = (
+  filename
+) => `import * as Post from "../posts/${filename}";
 import { makePost } from "../../makePost";
 
 export default makePost(Post);

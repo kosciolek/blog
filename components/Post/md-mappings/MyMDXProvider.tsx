@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { CodeBlock } from "./CodeBlock";
-import { H1, H2, H3, H4, H5, H6 } from "./mappings";
+import { H1, H2, H3, H4, H5, H6, P } from "./mappings";
 import { Link } from "./Link";
 
 export const MyMDXProvider: FC = ({ children }) => (
@@ -14,6 +14,7 @@ export const MyMDXProvider: FC = ({ children }) => (
       h4: H4,
       h5: H5,
       h6: H6,
+      p: P,
       a: Link,
     }}
   >

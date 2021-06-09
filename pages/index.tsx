@@ -6,7 +6,12 @@ import { MyMDXProvider } from "../components/Post/md-mappings/MyMDXProvider";
 export default function Home(): ReactNode {
   return (
     <MyMDXProvider>
-      <Post mdx={TestPost} author={meta.author} date={meta.date} title={meta.title} />
+      <Post
+        mdx={TestPost}
+        author={meta.author}
+        date={meta.date}
+        title={meta.title}
+      />
     </MyMDXProvider>
   );
 }

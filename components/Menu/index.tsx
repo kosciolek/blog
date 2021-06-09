@@ -4,7 +4,11 @@ import { Nav } from "./style";
 
 export const Menu: FC = () => (
   <Nav>
-    <Link href="/all-articles">ALL ARTICLES</Link>
-    <Link href="/about-me">WHO AND WHY</Link>
+    <Link variant="highlighted" href="/all-articles">
+      ALL ARTICLES
+    </Link>
+    <Link variant="highlighted" href="/about-me">
+      WHO AND WHY
+    </Link>
   </Nav>
 );

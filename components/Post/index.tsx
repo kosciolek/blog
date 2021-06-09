@@ -13,7 +13,14 @@ export const Post: FC<PostProps> = ({ author, date, mdx: Mdx, title }) => (
     <div style={{ marginBottom: "32px" }}>
       <Title>{title}</Title>
       <Subtitle>
-        by <Author>{author}</Author> at {date}
+        by{" "}
+        <Author>
+          <strong>{author}</strong>
+        </Author>{" "}
+        at{" "}
+        <time>
+          <b>{date}</b>
+        </time>
       </Subtitle>
     </div>
     <Mdx />

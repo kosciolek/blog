@@ -11,6 +11,10 @@ export const darkTheme = {
       medium: "#474B4F",
       bright: "#6B6E70",
     },
+    scrollbar: {
+      shadow: "rgba(0, 0, 0, 0.3)",
+      background: "#161616",
+    },
   },
 };
 
