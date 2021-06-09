@@ -26,7 +26,6 @@ export const Header = styled.div`
   justify-content: space-between;
 
   color: ${({ theme }) => theme.color.front.main};
-  fill: ${({ theme }) => theme.color.front.main};
 `;
 
 export const IconContainer = styled.div`
@@ -52,7 +51,7 @@ export const Pre = styled.pre`
   grid-template-columns: auto 1fr;
   grid-row-gap: 6px;
   margin-bottom: 0;
-  margin-top: 12px;
+  margin-top: 12px; 
 `;
 
 export const LineNumber = styled.span`

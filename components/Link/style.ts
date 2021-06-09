@@ -4,6 +4,8 @@ export const A = styled.a<{ variant: "normal" | "highlighted" }>`
   color: ${({ theme }) => theme.color.front.main};
   cursor: pointer;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 
   ${({ variant }) =>
     variant === "highlighted" &&
@@ -26,7 +28,6 @@ export const A = styled.a<{ variant: "normal" | "highlighted" }>`
         text-decoration: underline;
       }
     `}
-  
   
   transition: background-color 250ms, color 250ms;
 `;

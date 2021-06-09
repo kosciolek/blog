@@ -4,11 +4,20 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/GlobalStyles";
 import { darkTheme } from "../styles/theme";
-import "../styles/global.css";
-import { Center } from "../components/Center";
+import "normalize.css/normalize.css";
+import { PageComponent } from "../types/PageComponent";
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   const [theme] = useState(darkTheme);
+  const PageComp = Component as PageComponent;
+  const withMaybeLayout = PageComp.Layout ? (
+    <PageComp.Layout {...pageProps}>
+      <PageComp {...pageProps} />
+    </PageComp.Layout>
+  ) : (
+    <Component {...pageProps} />
+  );
+
   return (
     <>
       <Head>
@@ -20,9 +29,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Center>
-          <Component {...pageProps} />
-        </Center>
+        {withMaybeLayout}
       </ThemeProvider>
     </>
   );

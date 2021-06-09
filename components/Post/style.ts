@@ -11,7 +11,11 @@ export const Subtitle = styled.div`
   color: ${({ theme }) => theme.color.front.dim};
 `;
 
-export const Author = styled.span`
+export const Highlighted = styled.span`
+  color: ${({ theme }) => theme.color.front.highlight};
+`;
+
+export const Date = styled.time`
   color: ${({ theme }) => theme.color.front.highlight};
 `;
 

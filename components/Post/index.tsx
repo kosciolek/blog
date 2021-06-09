@@ -1,5 +1,5 @@
 import React, { ComponentType, FC } from "react";
-import { Author, Main, Subtitle, Title } from "./style";
+import { Date, Highlighted, Main, Subtitle, Title } from "./style";
 
 export interface PostProps {
   title: string;
@@ -14,13 +14,13 @@ export const Post: FC<PostProps> = ({ author, date, mdx: Mdx, title }) => (
       <Title>{title}</Title>
       <Subtitle>
         by{" "}
-        <Author>
+        <Highlighted>
           <strong>{author}</strong>
-        </Author>{" "}
+        </Highlighted>{" "}
         at{" "}
-        <time>
+        <Date>
           <b>{date}</b>
-        </time>
+        </Date>
       </Subtitle>
     </div>
     <Mdx />

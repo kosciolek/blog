@@ -1,6 +1,5 @@
 import React, { FC, Fragment, useCallback, useRef, useState } from "react";
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
-import dracula from "prism-react-renderer/themes/dracula";
 import {
   Divider,
   Filename,
@@ -8,12 +7,13 @@ import {
   IconContainer,
   LineNumber,
   Pre,
-  Wrapper,
+  Wrapper
 } from "./style";
 import { Icon } from "../../../Icon";
 import { Button } from "../../../Button";
 import { useBodyOverflow } from "../../../../hooks/useBodyOverflow";
 import { useHotkey } from "../../../../hooks/useHotkey";
+import { codeTheme } from "../codeTheme";
 
 export type CodeBlockMeta = {
   filename: string;
@@ -24,7 +24,7 @@ export type CodeBlockProps = { className: string } & CodeBlockMeta;
 export const CodeBlock: FC<CodeBlockProps> = ({
   children,
   className,
-  filename,
+  filename
 }) => {
   const language = className.replace(/language-/, "") as Language;
 
@@ -32,7 +32,8 @@ export const CodeBlock: FC<CodeBlockProps> = ({
 
   const wrapperRef = useRef<null | HTMLDivElement>(null);
   const [[placeholderWidth, placeholderHeight], setPlaceholder] = useState([
-    0, 0,
+    0,
+    0
   ]);
 
   const [fullscreen, setFullscreen] = useState(false);
@@ -65,7 +66,7 @@ export const CodeBlock: FC<CodeBlockProps> = ({
         <div
           style={{
             width: `${placeholderWidth}px`,
-            height: `${placeholderHeight}px`,
+            height: `${placeholderHeight}px`
           }}
         />
       )}
@@ -76,10 +77,13 @@ export const CodeBlock: FC<CodeBlockProps> = ({
               <Filename>{filename}</Filename>
               <IconContainer>
                 <Button onClick={copyToClipboard}>
-                  <Icon size="22px" icon="Copy" />
+                  <Icon color="main" size="22px" icon="Copy" />
                 </Button>
                 <Button onClick={toggleFullscreen}>
-                  <Icon icon={fullscreen ? "FullscreenExit" : "Fullscreen"} />
+                  <Icon
+                    color="main"
+                    icon={fullscreen ? "FullscreenExit" : "Fullscreen"}
+                  />
                 </Button>
               </IconContainer>
             </Header>
@@ -90,21 +94,21 @@ export const CodeBlock: FC<CodeBlockProps> = ({
           {...defaultProps}
           code={children as string}
           language={language}
-          theme={dracula}
+          theme={codeTheme}
         >
           {({
             className: classNameInner,
             style,
             tokens,
             getLineProps,
-            getTokenProps,
+            getTokenProps
           }) => (
             <Pre
               className={classNameInner}
               style={{
                 ...style,
                 padding: "0 16px 16px 16px",
-                overflowX: "auto",
+                overflowX: "auto"
               }}
             >
               {tokens.map((line, lineIndex) => {
@@ -127,6 +131,7 @@ export const CodeBlock: FC<CodeBlockProps> = ({
                         // eslint-disable-next-line react/no-array-index-key
                         <span key={key} {...getTokenProps({ token, key })} />
                       ))}
+                      <span>&nbsp;&nbsp;&nbsp;</span>
                     </div>
                   </Fragment>
                 );

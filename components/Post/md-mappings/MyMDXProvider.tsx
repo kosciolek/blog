@@ -3,11 +3,13 @@ import { MDXProvider } from "@mdx-js/react";
 import { CodeBlock } from "./CodeBlock";
 import { H1, H2, H3, H4, H5, H6, P } from "./mappings";
 import { Link } from "./Link";
+import { InlineCode } from "./InlineCode";
 
 export const MyMDXProvider: FC = ({ children }) => (
   <MDXProvider
     components={{
       code: CodeBlock,
+      inlineCode: InlineCode,
       h1: H1,
       h2: H2,
       h3: H3,

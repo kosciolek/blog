@@ -1,11 +1,13 @@
-import React, { ReactNode } from "react";
-import { Menu } from "../components/Menu";
+import React from "react";
+import { PageComponent } from "../types/PageComponent";
+import { StadardLayout } from "../components/Layout";
 
-export default function AboutMe(): ReactNode {
-  return (
-    <>
-      <Menu />
-      <div>Hello</div>
-    </>
-  );
-}
+const AboutMe: PageComponent = () => (
+  <>
+    <div>Hello</div>
+  </>
+);
+
+AboutMe.Layout = StadardLayout;
+
+export default AboutMe;

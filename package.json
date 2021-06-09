@@ -22,6 +22,7 @@
     "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^10.2.3",
     "@types/mdx-js__react": "^1.5.3",
+    "@use-gesture/react": "^10.0.0-beta.11",
     "next": "10.2.3",
     "normalize.css": "^8.0.1",
     "prism-react-renderer": "^1.2.1",
