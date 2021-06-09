@@ -7,7 +7,7 @@ import {
   IconContainer,
   LineNumber,
   Pre,
-  Wrapper
+  Wrapper,
 } from "./style";
 import { Icon } from "../../../Icon";
 import { Button } from "../../../Button";
@@ -24,7 +24,7 @@ export type CodeBlockProps = { className: string } & CodeBlockMeta;
 export const CodeBlock: FC<CodeBlockProps> = ({
   children,
   className,
-  filename
+  filename,
 }) => {
   const language = className.replace(/language-/, "") as Language;
 
@@ -32,8 +32,7 @@ export const CodeBlock: FC<CodeBlockProps> = ({
 
   const wrapperRef = useRef<null | HTMLDivElement>(null);
   const [[placeholderWidth, placeholderHeight], setPlaceholder] = useState([
-    0,
-    0
+    0, 0,
   ]);
 
   const [fullscreen, setFullscreen] = useState(false);
@@ -66,7 +65,7 @@ export const CodeBlock: FC<CodeBlockProps> = ({
         <div
           style={{
             width: `${placeholderWidth}px`,
-            height: `${placeholderHeight}px`
+            height: `${placeholderHeight}px`,
           }}
         />
       )}
@@ -101,14 +100,14 @@ export const CodeBlock: FC<CodeBlockProps> = ({
             style,
             tokens,
             getLineProps,
-            getTokenProps
+            getTokenProps,
           }) => (
             <Pre
               className={classNameInner}
               style={{
                 ...style,
                 padding: "0 16px 16px 16px",
-                overflowX: "auto"
+                overflowX: "auto",
               }}
             >
               {tokens.map((line, lineIndex) => {

@@ -5,7 +5,7 @@ export const Wrapper = styled.div<{
   size?: string;
   color?: keyof Theme["color"]["front"] | string;
 }>`
-  fill: ${props => props.theme.color.front[props.color] || props.color};
+  fill: ${(props) => props.theme.color.front[props.color] || props.color};
 
   ${({ size }) =>
     size &&

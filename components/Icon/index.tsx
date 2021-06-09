@@ -12,7 +12,7 @@ export interface IconProps {
 export const Icon: FC<IconProps> = ({
   size = "24px",
   icon,
-  color = "inherit"
+  color = "inherit",
 }) => {
   const IconComponent = icons[icon];
   return (

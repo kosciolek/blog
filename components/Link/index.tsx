@@ -25,5 +25,5 @@ export const Link: FC<LinkProps> = ({
 );
 
 Link.defaultProps = {
-  variant: "normal"
+  variant: "normal",
 };
