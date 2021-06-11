@@ -2,10 +2,11 @@ import styled, { css } from "styled-components";
 import { Theme } from "../../styles/theme";
 
 export const Wrapper = styled.div<{
-  size?: string;
+  size: string;
   color?: keyof Theme["color"]["front"] | string;
 }>`
-  fill: ${(props) => props.theme.color.front[props.color] || props.color};
+  color: ${props => props.theme.color.front[props.color] || props.color};
+  fill: currentColor;
 
   ${({ size }) =>
     size &&

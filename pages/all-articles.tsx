@@ -1,6 +1,6 @@
 import React from "react";
 import { PageComponent } from "../types/PageComponent";
-import { StadardLayout } from "../components/Layout";
+import { StandardLayout } from "../components/Layout";
 
 const AllArticles: PageComponent = () => (
   <>
@@ -8,6 +8,6 @@ const AllArticles: PageComponent = () => (
   </>
 );
 
-AllArticles.Layout = StadardLayout;
+AllArticles.Layout = StandardLayout;
 
 export default AllArticles;

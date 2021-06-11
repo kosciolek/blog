@@ -10,7 +10,7 @@ export interface IconProps {
 }
 
 export const Icon: FC<IconProps> = ({
-  size = "24px",
+  size = "1.5em",
   icon,
   color = "inherit",
 }) => {

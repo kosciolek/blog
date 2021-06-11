@@ -20,6 +20,7 @@ export const Copyright = styled.div`
 
 export const GithubLink = styled(Link)`
   margin-top: 32px;
+  font-size: 13px;
 `;
 
 export const Links = styled.div`

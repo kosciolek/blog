@@ -20,7 +20,7 @@ export const Footer: FC = () => (
     <GithubLink
       variant="highlighted"
       href="https://github.com/kosciolek/blog"
-      startIcon={<Icon icon="Github" color="currentColor" />}
+      startIcon={<Icon icon="Github" color="main" />}
     >
       View on github
     </GithubLink>

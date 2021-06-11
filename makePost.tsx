@@ -2,7 +2,7 @@ import { ComponentType } from "react";
 import { MyMDXProvider } from "./components/Post/md-mappings/MyMDXProvider";
 import { Post } from "./components/Post";
 import { PageComponent } from "./types/PageComponent";
-import { StadardLayout } from "./components/Layout";
+import { StandardLayout } from "./components/Layout";
 
 export const makePost = ({
   default: Mdx,
@@ -23,7 +23,7 @@ export const makePost = ({
     </MyMDXProvider>
   );
 
-  component.Layout = StadardLayout;
+  component.Layout = StandardLayout;
 
   return component;
 };

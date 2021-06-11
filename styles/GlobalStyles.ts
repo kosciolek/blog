@@ -12,6 +12,16 @@ export const GlobalStyles = createGlobalStyle`${css`
     &.${bodyOverflowHiddenClass} {
       overflow: hidden;
     }
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    letter-spacing: 0.005em;
+  }
+
+  #__next {
+    flex-grow: 1;
   }
 
   h1,

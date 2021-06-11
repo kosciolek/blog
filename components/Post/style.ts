@@ -19,7 +19,7 @@ export const Date = styled.time`
   color: ${({ theme }) => theme.color.front.highlight};
 `;
 
-export const Main = styled.main`
+export const Wrapper = styled.div`
   line-height: 150%;
   font-size: 22px;
   color: ${({ theme }) => theme.color.front.text};

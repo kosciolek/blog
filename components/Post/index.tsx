@@ -1,5 +1,5 @@
 import React, { ComponentType, FC } from "react";
-import { Date, Highlighted, Main, Subtitle, Title } from "./style";
+import { Date, Highlighted, Wrapper, Subtitle, Title } from "./style";
 
 export interface PostProps {
   title: string;
@@ -9,7 +9,7 @@ export interface PostProps {
 }
 
 export const Post: FC<PostProps> = ({ author, date, mdx: Mdx, title }) => (
-  <Main>
+  <Wrapper>
     <div style={{ marginBottom: "32px" }}>
       <Title>{title}</Title>
       <Subtitle>
@@ -24,5 +24,5 @@ export const Post: FC<PostProps> = ({ author, date, mdx: Mdx, title }) => (
       </Subtitle>
     </div>
     <Mdx />
-  </Main>
+  </Wrapper>
 );

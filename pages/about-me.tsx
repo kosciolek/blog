@@ -1,6 +1,6 @@
 import React from "react";
 import { PageComponent } from "../types/PageComponent";
-import { StadardLayout } from "../components/Layout";
+import { StandardLayout } from "../components/Layout";
 
 const AboutMe: PageComponent = () => (
   <>
@@ -8,6 +8,6 @@ const AboutMe: PageComponent = () => (
   </>
 );
 
-AboutMe.Layout = StadardLayout;
+AboutMe.Layout = StandardLayout;
 
 export default AboutMe;
