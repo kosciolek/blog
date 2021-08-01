@@ -4,6 +4,7 @@ import { CodeBlock } from "./CodeBlock";
 import { H1, H2, H3, H4, H5, H6, P } from "./mappings";
 import { Link } from "./Link";
 import { InlineCode } from "./InlineCode";
+import { Img } from "./Img";
 
 export const MyMDXProvider: FC = ({ children }) => (
   <MDXProvider
@@ -18,6 +19,7 @@ export const MyMDXProvider: FC = ({ children }) => (
       h6: H6,
       p: P,
       a: Link,
+      img: Img,
     }}
   >
     {children}

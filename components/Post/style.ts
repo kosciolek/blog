@@ -19,8 +19,8 @@ export const Date = styled.time`
   color: ${({ theme }) => theme.color.front.highlight};
 `;
 
-export const Wrapper = styled.div`
-  line-height: 150%;
+export const Article = styled.article`
+  line-height: 1.65;
   font-size: 22px;
   color: ${({ theme }) => theme.color.front.text};
 `;

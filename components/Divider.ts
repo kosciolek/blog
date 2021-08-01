@@ -4,7 +4,7 @@ export interface DividerProps {
   noMargin?: boolean;
 }
 export const Divider = styled.div<DividerProps>`
-  height: 2px;
+  height: 1px;
   background-color: ${({ theme }) => theme.color.back.medium};
   width: 100%;
 

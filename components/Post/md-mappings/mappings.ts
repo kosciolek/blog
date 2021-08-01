@@ -32,4 +32,5 @@ export const H6 = styled.h6`
 
 export const P = styled.p`
   margin: 18px 0;
+  text-align: justify;
 `;

@@ -1,0 +1,27 @@
+export const meta = {
+  author: "Juliusz Kościołek",
+  title: "Dates and Timezones in JavaScript",
+  date: [2021, 1, 1],
+};
+
+At its core, the JavaScript `Date` is just one, and only one number. It's the amount of **milliseconds elapsed since 00:00:00 1 January 1970 UTC+0**, and it may be extracted from the object via `date.getTime()`. This number is always the same, regardless of timezones. A `new Date().getTime()` (or `Date.now()`) called at once on multiple machines, no matter the timezone, returns the same number.
+
+## Test asd
+
+// screenshots from local and droplet
+
+Certain methods (`getHours`, `toDateString` for instance) return timezone-specific data. These offsets however are applied by the methods - the Date object itself is not timezone-specific.
+
+Let us suppose
+
+test
+test
+
+## Test
+
+#### Some code
+
+```ts filename=test.ts
+const a: string = "asd";
+console.log(a);
+```

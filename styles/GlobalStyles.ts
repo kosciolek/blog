@@ -29,7 +29,11 @@ export const GlobalStyles = createGlobalStyle`${css`
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    margin: 0;
+    line-height: 1.4;
+  }
+
   p {
     margin: 0;
   }
